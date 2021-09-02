@@ -1,0 +1,16 @@
+.header__logo {
+  @extend %logo;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.logo__text {
+  color: $dark-color;
+  &--inversion {
+    color: $light-color;
+  }
+}
+.footer__logo {
+  @extend %logo;
+  margin-bottom: 20px;
+}

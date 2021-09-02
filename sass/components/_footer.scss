@@ -1,0 +1,101 @@
+.footer {
+  background-color: $background-footer;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__container {
+    @include centered(null, flex, baseline);
+  }
+}
+.adress {
+  font-style: normal;
+  &__text {
+    color: $light-color;
+    font-size: $primary-font-size;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin-bottom: 9px;
+  }
+}
+.adress__list {
+  @extend %list;
+}
+.adress__link {
+  color: rgba(255, 255, 255, 0.6);
+  @extend %link;
+  font-size: var(--primary-font-size);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  @include transition(color, null, null);
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
+}
+.adress__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+.block {
+  margin-left: 70px;
+  &--form {
+    margin-left: auto;
+  }
+}
+.block__text {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: $secondary-font-size;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: $light-color;
+  display: block;
+  margin-bottom: 20px;
+}
+.socials__link--dark {
+  color: $light-color;
+  background-color: rgba(255, 255, 255, 0.1);
+  @include transition(background-color, null, null);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+.block__email {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
+  color: $icon-color;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  @include transition(border-color, null, null);
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+.block__email input::placeholder {
+  font-size: $secondary-font-size;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.block__button {
+  position: relative;
+  overflow: hidden;
+  justify-content: start;
+  padding-left: 28px;
+}
+.block__icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  @include transition(transform, null, null);
+  .block__button:focus & {
+    transform: translateY(-50px);
+  }
+}

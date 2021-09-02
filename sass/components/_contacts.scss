@@ -1,0 +1,32 @@
+.contacts {
+  @include centered(null);
+  @extend %list;
+  margin-left: auto;
+  font-weight: 500;
+  font-size: $primary-font-size;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.contacts__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.contacts__link {
+  @include centered(null);
+  @extend %link;
+  color: inherit;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include transition(color, null, null);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}

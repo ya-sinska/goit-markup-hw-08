@@ -1,0 +1,27 @@
+.section--narrow {
+  @include section(0, 94px);
+}
+.product-thumb {
+  position: relative;
+  transform: scale(1);
+  @include transition(transform, null, null);
+  .section__item:hover & {
+    transform: scale(1.1);
+  }
+}
+.product-thumb__label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  @include centered(center);
+  height: 70px;
+  font-weight: 700;
+  font-size: $primary-font-size;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: $light-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}

@@ -1,0 +1,18 @@
+.section__link {
+  @include centered(center);
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: $icon-color;
+  @extend %link;
+  @include transition(color, border-color, null);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+.section__icon {
+  fill: currentColor;
+}

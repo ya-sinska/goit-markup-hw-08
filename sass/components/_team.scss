@@ -1,0 +1,28 @@
+.section--dark-theme {
+  @include section();
+  background-color: $background-section;
+}
+.section__item--dark-theme {
+  background-color: $light-color;
+  font-size: $secondary-font-size;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  width: 270px;
+}
+.card__text {
+  padding: 30px 32px;
+  text-align: center;
+}
+.card__title {
+  color: $secondary-color;
+  font-weight: 500;
+
+  margin-bottom: 10px;
+}
+.card__subtitle {
+  color: $primary-color;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,26 @@
+.socials {
+  display: flex;
+  @extend %list;
+}
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.socials__link {
+  @extend %link;
+  @include centered(center);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $icon-color;
+  @include transition(color, background-color, null);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $light-color;
+  }
+}
+.socials__icon {
+  fill: currentColor;
+}

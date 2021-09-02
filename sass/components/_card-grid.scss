@@ -1,0 +1,80 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  @extend %list;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+.grid__item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.product {
+  display: block;
+  @extend %link;
+  @include transition(box-shadow, null, null);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.product__thumb {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  @include transition(transform, null, null);
+  .product:hover &,
+  .product:focus & {
+    transform: translateY(0);
+  }
+}
+.overlay__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $light-color;
+  /* opacity: 0; */
+  overflow: auto;
+  .product:focus &,
+  .product:hover & {
+    transform: translateY(0);
+  }
+}
+.product__text {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+}
+.product__title {
+  color: $secondary-color;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  margin-bottom: 4px;
+}
+.product__description {
+  color: $primary-color;
+  font-size: $secondary-font-size;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}

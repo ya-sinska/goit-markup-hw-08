@@ -1,0 +1,21 @@
+// transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+@mixin transition(
+  $one,
+  $two,
+  $three,
+  $td: 250ms,
+  $tf: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition-property: $one, $two, $three;
+  transition-duration: $td;
+  transition-timing-function: $tf;
+}
+@mixin centered($jc, $disp: flex, $ai: center) {
+  justify-content: $jc;
+  display: $disp;
+  align-items: $ai;
+}
+@mixin section($pt: 94px, $pb: 94px) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
