@@ -1,16 +1,36 @@
-.header__logo {
-  @extend %logo;
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+.logo {
+  display: block;
+  color: $accent-color;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-decoration: none;
 }
+.header__logo {
+  padding: 16px 0;
+  @media screen and(min-width:768px) {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and(min-width:1200px) {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
 .logo__text {
   color: $dark-color;
   &--inversion {
     color: $light-color;
   }
 }
-.footer__logo {
-  @extend %logo;
-  margin-bottom: 20px;
-}
+// .footer__logo {
+//   @extend %logo;
+//   margin-bottom: 20px;
+// }
