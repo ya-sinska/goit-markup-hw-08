@@ -1,9 +1,10 @@
 .hero-section {
   @include centered(center);
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 1600px;
   height: 600px;
-
   background-color: $background-footer;
   background-image: linear-gradient(
       to right,
@@ -14,6 +15,17 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  // @media screen and(min-width:480px) {
+  //   max-width: 480px;
+  //   height: 400px;
+  // }
+  // @media screen and(min-width:768px) {
+  //   max-width: 768px;
+  // }
+  // @media screen and(min-width:1200px) {
+  //   max-width: 1600px;
+  //   height: 600px;
+  // }
 }
 .hero-section__title {
   margin-right: auto;

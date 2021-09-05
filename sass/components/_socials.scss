@@ -1,6 +1,7 @@
 .socials {
   display: flex;
   @extend %list;
+  justify-content: center;
 }
 .socials__item {
   &:not(:last-child) {
