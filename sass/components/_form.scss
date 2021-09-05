@@ -4,12 +4,16 @@
   flex-direction: column;
 }
 .form__title {
+  font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: $secondary-color;
   margin-bottom: 12px;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 .form__field {
   display: flex;
@@ -74,16 +78,24 @@
 }
 .consent__text {
   color: $primary-color;
-  font-size: $primary-font-size;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
+  @media screen and (min-width: 1200px) {
+    font-size: $primary-font-size;
+    line-height: 1.71;
+  }
 }
 .consent__link {
-  font-size: $primary-font-size;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: $accent-color;
   margin-left: 3px;
+  @media screen and (min-width: 1200px) {
+    font-size: $primary-font-size;
+    line-height: 1.71;
+  }
 }
 .checkbox {
   @extend %visually-hidden;

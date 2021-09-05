@@ -1,13 +1,12 @@
 .section__list--grid {
   display: block;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
   }
-  @media screen and (min-width: 1200px) {
-    margin: 0;
-    flex-wrap: nowrap;
+  @media screen and(min-width:1200px) {
+    display: flex;
   }
 }
 
@@ -15,12 +14,6 @@
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
-  }
-
-  &:last-child {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 0;
-    }
   }
 }
 

@@ -6,6 +6,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  overflow-y: scroll;
   @include transition(opacity, null, null);
   &--hidden {
     opacity: 0;
@@ -13,21 +14,31 @@
   }
 }
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%) scale(1);
   .backdrop--hidden & {
     transform: translate(-50%, -50%) scale(0.9);
   }
-  width: 528px;
-  height: 581px;
   background-color: $light-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 40px;
   @include transition(transform, null, null);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  @media screen and(min-width:480px) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and(min-width:1200px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+  }
 }
 .modal__button-close {
   position: absolute;

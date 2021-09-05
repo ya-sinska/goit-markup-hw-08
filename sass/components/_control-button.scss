@@ -1,12 +1,25 @@
 .control {
-  @include centered(center, flex, null);
-  margin: 0 0 50px 0;
   list-style: none;
   padding: 0;
+  @media screen and(max-width:767px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and(min-width:768px) {
+    @include centered(center, flex, null);
+    margin: 0 0 30px 0;
+  }
+  @media screen and(min-width:1200px) {
+    @include centered(center, flex, null);
+    margin: 0 0 50px 0;
+  }
 }
 .control__item {
   &:not(:last-child) {
     margin-right: 8px;
+  }
+  @media screen and(max-width:767px) {
+    margin-bottom: 15px;
   }
 }
 .control__button {
@@ -14,13 +27,12 @@
   color: $secondary-color;
   border: 0;
   border-radius: 4px;
-
   padding: 6px 22px;
 
   font-family: inherit;
   font-weight: 500;
   font-size: $secondary-font-size;
-  line-height: 1.62;
+  line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
   cursor: pointer;
