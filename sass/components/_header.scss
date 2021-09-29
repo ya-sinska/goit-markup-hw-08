@@ -51,6 +51,7 @@
     background-color: $light-color;
     padding: 48px 40px;
     transform: translateX(100%);
+    @include transition(transform, null, null);
     &.is-open {
       transform: translateX(0);
     }
@@ -125,7 +126,7 @@
     display: block;
     position: absolute;
     left: 0;
-    bottom: -1px;
+    bottom: -2px;
 
     width: 100%;
     height: 4px;
@@ -170,6 +171,11 @@
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: $primary-color;
+  @include transition(color, null, null);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
   @media screen and (min-width: 768px) {
     font-size: 12px;
     &:not(:last-child) {
@@ -185,11 +191,18 @@
     }
   }
 }
+.contacts__item--tel {
+  font-size: 8vw;
+  @media screen and(min-width:430px) and (max-width: 767px) {
+    font-size: 34px;
+  }
+  @media screen and(min-width:768px) {
+    font-size: 12px;
+  }
+}
 @media screen and(max-width:767px) {
   .contacts__item--tel {
     margin-bottom: 32px;
-    color: $accent-color;
-    font-size: 34px;
   }
   .contacts__item--mail {
     margin-bottom: 64px;
@@ -205,8 +218,12 @@
   }
   @media screen and(min-width:768px) {
     @include centered(null);
-    // padding-top: 32px;
-    // padding-bottom: 32px;
+    &--mail {
+      padding-top: 21px;
+    }
+    &--tel {
+      padding-bottom: 21px;
+    }
   }
   @media screen and(min-width:1200px) {
     @include centered(null);
@@ -221,11 +238,28 @@
     display: inline-block;
     fill: currentColor;
     margin-right: 8px;
+    &--mail {
+      width: 14px;
+      height: 10px;
+    }
+    &--tel {
+      width: 10px;
+      height: 14px;
+    }
   }
-  @media screen and(min-width:768px) {
+  @media screen and(min-width:1200px) {
     margin-right: 10px;
+    &--mail {
+      width: 16px;
+      height: 12px;
+    }
+    &--tel {
+      width: 10px;
+      height: 16px;
+    }
   }
 }
+
 .menu-socials {
   @media screen and (min-width: 768px) {
     display: none;
@@ -243,6 +277,11 @@
   color: $accent-color;
 
   text-decoration: none;
+  @include transition(color, null, null);
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
 }
 
 .menu-socials__link:not(:last-child) {

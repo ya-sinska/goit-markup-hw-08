@@ -3,13 +3,21 @@
   padding-top: 60px;
   padding-bottom: 60px;
   &__container {
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       display: block;
       text-align: center;
     }
     @media screen and (min-width: 1200px) {
       @include centered(null, flex, baseline);
     }
+  }
+}
+.footer__desktop {
+  @media screen and (min-width: 768px) and(max-width: 1199px) {
+    @include centered(space-around);
+  }
+  @media screen and (min-width: 1200px) {
+    @include centered(null, flex, baseline);
   }
 }
 @media screen and (max-width: 1199px) {
@@ -56,6 +64,9 @@
 }
 .block {
   margin-bottom: 60px;
+  &--form {
+    margin-bottom: 0;
+  }
   @media screen and(min-width:1200px) {
     margin-bottom: 0;
     margin-left: 70px;
