@@ -11,6 +11,12 @@
 }
 
 .section__item--features {
+  @media screen and (max-width: 767px) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
